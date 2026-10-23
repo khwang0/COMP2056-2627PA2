@@ -27,36 +27,13 @@ public class TestClass {
     @Order(3)
     void testGetName3() {
         Player p = new Player("Kevin");
-        assertEquals(p.getName(),"Kevin");
-    }
-
-    @Test
-    @Order(4)
-    void testGetName4() {
-        Player p = new Player();
-        assertEquals(p.getName(),"Computer #4");
-    }
-
-
-    @Test
-    @Order(1)
-    void testGetName() {
-        Player p = new Player();
-        assertEquals(p.getName(),"Computer #1");
-    }
-
-    @Test
-    @Order(2)
-    void testGetName2() {
-        Player p2 = new Player();
-        Player p3 = new Player();
-        assert(p2.getName().equalsIgnoreCase("Computer #2") && p3.getName().equalsIgnoreCase("Computer #3") );
+        assertTrue(p.getName().equals("Kevin"));
     }
 
 
     @Test
     void testGetScore() {
-        Player p = new Player();
+        Player p = new Player("Tmp");
         p.moveToPile( new Card[] {new Card(10)} , 1);
         assert(p.getScore() == 3);
     }
@@ -64,7 +41,7 @@ public class TestClass {
 
     @Test
     void testDealCard() {
-        Player p = new Player();
+        Player p = new Player("Tmp");
         p.dealCard(new Card(4));
         p.dealCard(new Card(5));
 
@@ -74,7 +51,7 @@ public class TestClass {
 
     @Test
     void testDealCard2() {
-        Player p = new Player();
+        Player p = new Player("Tmp");
         p.dealCard(new Card(4));
         p.dealCard(new Card(7));
         p.dealCard(new Card(5));
@@ -86,7 +63,7 @@ public class TestClass {
 
     @Test
     void testTakeCard() throws Exception {
-        Player p = new Player();
+        Player p = new Player("tmp");
         Card[] cards = {new Card(4), new Card(6), new Card(8), null, null, null};
         p.moveToPile(cards, 3);
         out.flush();
@@ -100,8 +77,8 @@ public class TestClass {
     }
 
     @Test
-    void testTakeCard2() {
-        Player p = new Player();
+    void testTakeCard2() throws Exception {
+        Player p = new Player("tmp");
         Card[] cards = {new Card(4), new Card(6), new Card(8), null, null, null};
         p.moveToPile(cards, 3);
         assertArrayEquals(cards, new Card[6]);
@@ -109,7 +86,7 @@ public class TestClass {
 
     @Test
     void testTakeCard3() throws Exception {
-        Player p = new Player();
+        Player p = new Player("tmp");
         Card[] cards = {new Card(4), new Card(6), new Card(8), null, null, null};
         Card[] cards2 = {new Card(1), new Card(12), new Card(14), null, null, null};
         p.moveToPile(cards, 3);

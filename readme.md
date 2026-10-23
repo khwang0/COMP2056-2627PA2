@@ -1,23 +1,23 @@
 ![](hkbu.png)
-# COMP2026/COMP2046 Programming Assignment 2 - 6 nimmt!
+# COMP2056 Programming Assignment 2 - 6 nimmt!
 
-## 2022-23 Semester 1
+## 2026-27 Semester 1
 
 * Designed by: [Dr. Kevin Wang](mailto:kevinw@comp.hkbu.edu.hk)
-* Assignment Website: [GitHub](https://github.com/khwang0/COMP2026-2223PA1)
+* Assignment Website: [GitHub](https://github.com/khwang0/COMP2056-2627PA2)
 * Due: 
-  * UAT Due: 11:59pm (Monday midnight), 31st October, 2022
-  * Programming Due: 11:59pm (~~Saturday~~ Monday midnight), ~~12th~~ 14th November, 2022
+  * UAT Due: 11:59pm (Monday midnight), 31st October, 2026
+  * Programming Due: 11:59pm (Sunday midnight), 8th November, 2026
 * Download the demo program: [here](demo.jar)
-* Download everything from the assignment: [here](https://github.com/khwang0/COMP2026-2223PA2/archive/refs/heads/master.zip)
+* Download everything from the assignment: [here](https://github.com/khwang0/COMP2056-2627PA2/archive/refs/heads/master.zip)
+* Weighting: 10%
 
 > To run the demo program, type the following in your terminal:
 > 
 > ```sh
-> > java -jar demo.jar
+> java -jar demo.jar
 > ```
 
-> This assignment is a COMP2046/COMP2026 assignment. It does not count towards your COMP2045 grade. 
 
 # Learning outcome
 
@@ -82,18 +82,7 @@ This models the table object. A table contains four stacks of cards `stacks`. Ea
 
 You don't need to do anything with this java file. The purpose of this file is to conduct some *unit test* for your code. If you are using IntelliJ, you should be able to use this file within a few quick steps. By looking at this file, you should have some ideas of how the TA grade your work!
 
-1. Open the file `TestClass.java`
-2. Click on the word `@Test` at line 26.
- ![](add-JUnit.png)  
-4. Click the red bulb and select `Add JUnit-5.x.x to classpath`.
-5. Click the arrow on the left of `public class TestClass` at line 17 and select `Run Tests`.
-![](runTest.png)  
-6. You shall see the following screen if there isn't any problem
-![](ok.png)  
-7. Or you will see some error if your code does not perform what it is suppose to do.
-![](notok.png)  
 
-> Note: If you are struggle with this file (e.g. cannot compile your code), simply delete this file. 
 
 # Understanding the Assignment Test (UAT)
 
@@ -124,30 +113,9 @@ Wherever necessary and appropriate, you should add inline comments to explain th
 # Submission 
 For submission upload the file `Card.java`, `Table.java`, and `Player.java` to Moodle.  
 
-Please be reminded that both the **Late Penalty Rule** and the **Penalty for Plagiarism** are applied strictly to all submissions of this course (including this assignment).   
-
-### Late Penalty Rule
-
-```java
-if (lateHour > 0) {
-    if (lateHour < 24) 
-        mark *= 0.8;
-    else if (lateHour < 48)
-        mark = mark >> 1;
-        else if (lateHour < 72)
-            mark = mark >> 2;
-            else
-                mark &= 0;
-}
-```
 
 
 
-
-
- ## Plagiarism
-
- Plagiarism is a serious offense and can be easily detected. Please don't share your code to your classmate even if they are threatening you with your friendship. If they don't have the ability to work on something that can compile, they would not be able to change your code to a state that we can't detect the act of plagiarism. For the first commit of plagiarism, regardless you shared your code or copied code from others, you will receive 0 with an addition of 5 mark penalty. If you commit plagiarism twice, your case will be presented in the exam board and you will receive a F directly.
 
 ## Marking Scheme 
 There are three elements in the marking scheme: 

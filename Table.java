@@ -1,12 +1,21 @@
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.Scanner;
+
 public class Table {
     /**
      * Total number of player. Use this variable whenever possible
      */
-    private static final int NUM_OF_PLAYERS = 4;
+    private final int NUM_OF_PLAYERS;
     /**
      * Total number of cards used in this game. Use this variable whenever possible
      */
-    private static final int TOTAL_NUMBER_OF_CARD = 104;
+    public static final int TOTAL_NUMBER_OF_CARD = 104;
+    /**
+     * Total number of turns in the game. Use this variable whenever possible
+     */
+    public static final int TOTAL_NUMBER_OF_TURN = 10;
+
+
     /**
      * The four stacks of cards on the table.
      */
@@ -25,11 +34,11 @@ public class Table {
      * 
      * You are responsible to maintain the data consistency.
      */
-    private int[] stacksCount = new int[4];
+    private final int[] stacksCount = new int[4];
     /**
      * The array of players
      */
-    private Player[] players = new Player[NUM_OF_PLAYERS];
+    private final Player[] players;
 
     /**
      * Default constructor
@@ -41,9 +50,7 @@ public class Table {
      * number). The value of card must be between 1 to 104. The number of bullHead
      * printed on each card can be referred to the rule.
      * 
-     * 2. Initialize four player. The first player should be a human player, call
-     * "Kevin". The other player should be a computer player. These computer player
-     * should have the name "Computer #1", "Computer #2", "Computer #3".
+     * 2. Initialize three player. The name of the players are "Kevin", "Mandel", "Rachel".
      * 
      * 3. Deal randomly 10 cards to each player. A card can only be dealt to one
      * player. That is, no two players can have the same card.
@@ -51,17 +58,21 @@ public class Table {
      * 4. Deal a card on each stack. The card dealt on the stack should not be dealt
      * to any player. Card dealt on each stack should also be unique (no two stack
      * have the same card).
-     * 
+     *
+     * @param numOfPlayers - the number of players in the game. Normally 3 to 5 players.
+     *
      */
-    public Table() {
-        // TODO
+    public Table(int numOfPlayers) {
+        //TODO
     }
 
     /**
      * This method is to find the correct stack that a card should be added to
-     * according to the rule. It should return the stack among which top-card of
-     * that stack is the largest of those smaller than the card to be placed. (If
-     * the rule sounds complicate to you, please refer to the game video.)
+     * according to the rule.
+     * It should return the stack among which top-card of that stack is the largest
+     * of those smaller than
+     * the card to be placed. (If the rule sounds complicate to you, please refer to
+     * the game video.)
      * 
      * In case the card to be place is smaller than the top cards of all stacks,
      * return -1.
@@ -71,17 +82,26 @@ public class Table {
      *         the card is smaller than all top cards
      */
     public int findStackToAdd(Card card) {
-        // TODO
+        //TODO
     }
 
     /**
      * To print the stacks on the table. Please refer to the demo program for the
-     * format. Within each stack, the card should be printed in ascending order,
-     * left to right. However, there is no requirement on the order of stack to
-     * print.
+     * format.
+     * Within each stack, the card should be printed in ascending order, left to
+     * right.
+     * 
+     * This method has been completed for you. Don't change it
      */
     public void print() {
-        // TODO
+        System.out.println("----------Table----------");
+        for (int i = 0; i < 4; i++) {
+            System.out.print("Stack " + i + ":");
+            for (int j = 0; j < stacksCount[i]; j++) 
+                stacks[i][j].print();
+            System.out.println();
+        }
+        System.out.println("-------------------------");
     }
 
     /**
@@ -92,18 +112,14 @@ public class Table {
      * 
      * In case a player plays a card smaller than all top cards, he will be
      * selecting one of the stack of cards and take them to his/her own score pile.
-     * If the player is a human player, he will be promoted for selection. If the
-     * player is a computer player, the computer player will select the "cheapest"
-     * stack, i.e. the stack that has fewest bull heads. If there are more than
-     * one stack having fewest bull heads, selecting any one of them.
+     *
+     * This method has been completed for you. Don't change it
      */
     public void runApp() {
         for (int turn = 0; turn < 10; turn++) {
-            // print Table
-            print();
-
-            // TODO
+            actionForEachTurn();
         }
+        System.out.println("\n\nGame Over. Final Result:");
         for (Player p : players) {
             System.out.println(p.getName() + " has a score of " + p.getScore());
             p.printPile();
@@ -111,12 +127,27 @@ public class Table {
     }
 
     /**
-     * Programme main. You should not change this.
+     * This method is to perform the action of each turn. In each turn, all players will
+     * play a card. These cards will be placed to the stacks from small to large according
+     * to the rule of the game.
+     *
+     * In case a player plays a card smaller than all top cards, he will be
+     * selecting one of the stack of cards and take them to his/her own score pile.
+     *
+     * Please refer to the demo programme for the details of the action of each turn.
+     */
+    private void actionForEachTurn() {
+        //TODO
+    }
+
+    /**
+     * Program main. Don't change
      * 
      * @param args - no use.
      */
     public static void main(String[] args) {
-        new Table().runApp();
+        new Table(3).runApp();
     }
 
+ 
 }

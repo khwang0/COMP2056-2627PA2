@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.concurrent.ThreadLocalRandom;
 
 public class Player {
     /**
@@ -20,9 +19,7 @@ public class Player {
      */
     private String name;
     /**
-     * A static variable that tells how many COMPUTER player has been initialized
-     * 
-     * edit:10/11/2022
+     * A static variable that tells how many player has been initialized
      */
     private static int count = 1;
 
@@ -32,19 +29,10 @@ public class Player {
      * You need to initialize your data member properly.
      */
     public Player(String name) {
-        // TODO
+        //TODO
+
     }
 
-    /**
-     * Default constructor that set the name of the player as "Computer #1",
-     * "Computer #2", "Computer #3"...
-     * The number grows when there are more computer players being created.
-     * 
-     * You need to initialize your data member properly.
-     */
-    public Player() {
-        // TODO
-    }
 
     /**
      * Getter of name
@@ -52,7 +40,7 @@ public class Player {
      * @return - the name of the player
      */
     public String getName() {
-        // TODO
+        //TODO
     }
 
     /**
@@ -64,63 +52,25 @@ public class Player {
      * Important: at the end of this method, you should also help removing all cards
      * from the parameter array "cards".
      * 
-     * 
-     * 
      * @param cards - an array of cards taken from a stack
      * @param count - number of cards taken from the stack
      */
     public void moveToPile(Card[] cards, int count) {
-        // TODO
+        //TODO
     }
 
+
     /**
-     * This method prompts a human player to play a card. It first print
-     * all cards on his hand. Then the player will need to select a card
-     * to play by entering the INDEX of the card.
-     * 
-     * @return - the card to play
+     * Ask the player to select a stack to collect. The stack number must be 
+     * between 0 to 3. If the player enters an invalid number, you should keep asking
+     * the player to enter a valid number.
      */
-    public Card playCard() {
-        // TODO
+    public int pickStackToCollect() {
+        //TODO
     }
 
     /**
-     * This method let a computer player to play a card randomly. The computer
-     * player will pick any available card to play in a random fashion.
-     * 
-     * @return - card to play
-     */
-    public Card playCardRandomly() {
-        // TODO
-    }
-
-    /**
-     * Deal a card to a player. This should add a card to the variable hand and
-     * update the variable handCount. During this method, you do not need to resize
-     * the array. You can assume that a player will be dealt with at most 10 cards.
-     * That is, the method will only be called 10 times on a player.
-     * 
-     * After each call of this method, the hand should be sorted properly according
-     * to the number of the card.
-     * 
-     * @param card - a card to be dealt
-     */
-    public void dealCard(Card card) {
-        // TODO
-    }
-
-    /**
-     * Get the score of the player by counting the total number of Bull Head in the
-     * score pile.
-     * 
-     * @return - score, 0 or a positive integer
-     */
-    public int getScore() {
-        // TODO
-    }
-
-    /**
-     * To print the score pile. This method has completed for you.
+     * To print the score pile. This method has been completed for you
      * 
      * You don't need to modify it and you should not modify it.
      */
@@ -135,13 +85,70 @@ public class Player {
      * This is a getter of hand's card. This method has been completed for you
      *
      * You don't need to modify it and you should not modify it.
-     * 
      * @param index - the index of card to take
      * @return - the card from the hand or null
      */
     public Card getHandCard(int index) {
-        if (index < 0 || index >= handCount)
+        if (index < 0 || index >= handCount) 
             return null;
         return hand[index];
     }
+
+
+    /**
+     * This method prompts a human player to play a card. It first print
+     * all cards on his hand. Then the player will need to select a card
+     * to play by entering the value of the card.
+     * 
+     * @return - the card to play
+     */
+    public Card playCard() {
+        //TODO
+    }
+
+
+    /**
+     * Deal a card to a player. This should add a card to the variable hand and
+     * update the variable handCount. During this method, you do not need to resize
+     * the array. You can assume that a player will be dealt with at most 10 cards.
+     * That is, the method will only be called 10 times on a player.
+     * 
+     * After each call of this method, the hand should be sorted properly according
+     * to the number of the card.
+     * 
+     * @param card - a card to be dealt
+     */
+    public void dealCard(Card card) {
+        //TODO
+   }
+
+    /**
+     * Get the score of the player by counting the total number of Bull Head in the
+     * score pile.
+     * 
+     * @return - score, 0 or a positive integer
+     */
+    public int getScore() {
+        //TODO
+    }
+
+
+    /**
+     * Given Print hand
+     * Don't change this method
+     *
+     */
+    private void printHand() {
+        System.out.println("----------" + name + "'s Hand----------");
+        for (int i = 0; i < handCount; i++) {
+            hand[i].print();
+            System.out.print("\t");
+            if (i % 5 == 4 || i == handCount - 1)
+                System.out.println();
+        }
+
+    }
+
+
+
 }
