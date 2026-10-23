@@ -107,8 +107,8 @@ For submission upload the file `Card.java`, `Table.java`, and `Player.java` to M
 
 ## Marking Scheme 
 There are three elements in the marking scheme: 
-* 5% - Understanding the Assignment Test (UAT)
-* 90% - a working program that functions as specified 
+
+* 95% - a working program that functions as specified 
 * 5% - Programming style and documentation 
 * -50% - if you define any extra class variable (field), addition class, change the method `main`, or change the visibility of any method. However, you can introduce some private method to help you resolve inner class logic.
 * -30% - if you use forbidden API such as `ArrayList`, `List`, `Arrays`. If you have doubt, please consult Kevin before submission.
