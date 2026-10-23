@@ -6,7 +6,7 @@
 * Designed by: [Dr. Kevin Wang](mailto:kevinw@comp.hkbu.edu.hk)
 * Assignment Website: [GitHub](https://github.com/khwang0/COMP2056-2627PA2)
 * Due: 
-  * UAT Due: 11:59pm (Monday midnight), 31st October, 2026
+  * UAT Due: No UAT this time.
   * Programming Due: 11:59pm (Sunday midnight), 8th November, 2026
 * Download the demo program: [here](demo.jar)
 * Download everything from the assignment: [here](https://github.com/khwang0/COMP2056-2627PA2/archive/refs/heads/master.zip)
@@ -83,20 +83,6 @@ This models the table object. A table contains four stacks of cards `stacks`. Ea
 You don't need to do anything with this java file. The purpose of this file is to conduct some *unit test* for your code. If you are using IntelliJ, you should be able to use this file within a few quick steps. By looking at this file, you should have some ideas of how the TA grade your work!
 
 
-
-# Understanding the Assignment Test (UAT)
-
-This part is independent to your programming code. You will need to answer the following short questions by **another due date**.
-Submit your answers on Moodle. 
-
-1. Assume the stacks on the table are: `Stack 0: [1, 4]`, `Stack 1: [10, 56]`, `Stack 2: [5]`, `Stack 3: [90, 91, 92, 95]`. Which stack should the card 44 be placed?
-2. According to the demo program, which of the following action the program will do when the game is over?
-   1. Print the scores of all players
-   2. Say "Good bye"
-   3. Ask the user to play again
-   4. Crash
-3. By which method a `Table` object can know a player's score (total number bull heads)?
-4. If a computer player is forced to pick up a stack, according to the assignment description which stack the computer player should pick?
 
 
 ---
