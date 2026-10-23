@@ -19,6 +19,8 @@
 > ```
 
 
+> Warning, assignment 3 will be based on this assignment. 
+
 # Learning outcome
 
 Students are expected to have some practices on object-oriented programming concepts/static variables/2D arrays/array resizing/method visibility in this assignment. We expect most students would spend 7 hours or more to finish the assignment without any assistance. Make sure you start as earlier as possible and ask us on Discord if you have any difficulty!
