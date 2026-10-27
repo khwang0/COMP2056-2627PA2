@@ -19,11 +19,6 @@ public class Player {
      */
     private String name;
     /**
-     * A static variable that tells how many player has been initialized
-     */
-    private static int count = 1;
-
-    /**
      * Other constructor that specify the name of the player.
      * 
      * You need to initialize your data member properly.
@@ -61,11 +56,17 @@ public class Player {
 
 
     /**
+     * Do not change this method. This method has no use in this assignment. However, it is useful for the next assignment.
+     */
+    public int pickStackToCollect(Card[][] stacks) {
+        return pickStackToCollect();
+    }
+    /**
      * Ask the player to select a stack to collect. The stack number must be 
      * between 0 to 3. If the player enters an invalid number, you should keep asking
      * the player to enter a valid number.
      */
-    public int pickStackToCollect() {
+    private int pickStackToCollect() {
         //TODO
     }
 
@@ -83,7 +84,8 @@ public class Player {
 
     /**
      * This is a getter of hand's card. This method has been completed for you
-     *
+     * We will use this method to test your code. 
+     * 
      * You don't need to modify it and you should not modify it.
      * @param index - the index of card to take
      * @return - the card from the hand or null
@@ -99,6 +101,18 @@ public class Player {
      * This method prompts a human player to play a card. It first print
      * all cards on his hand. Then the player will need to select a card
      * to play by entering the value of the card.
+     * 
+     * After playing a card, the card should be removed from the hand.
+     * The handcount should be updated accordingly. 
+     * 
+     * If a player enters an invalid card, you should keep asking the 
+     * player to enter a valid card.
+     * 
+     * The order of the cards on the hand should be maintained after 
+     * a card is played. i.e., if the player has cards 1, 2, 3, 4, 5 
+     * and he plays card 3, the order of the cards on the hand should 
+     * be 1, 2, 4, 5. NOT i, 2, null, 4, 5.
+     * 
      * 
      * @return - the card to play
      */

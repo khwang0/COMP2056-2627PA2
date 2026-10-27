@@ -50,13 +50,14 @@ Some methods are labeled as completed or given. Please don't make any change on 
 
 Please note the **bold word** below to get familiar with the terminology we used in this assignment.
 
-* We will assume there are four **players** in this game.
+* We will assume there are three **players** in this game. Number of player is extendable to 5 players. 
 * Each player will be first **dealt with 10 cards** to form their **hand cards**.
 * The aim of the game is to minimize the **score** a player received.
 * Scores are computed by adding the number of **bull heads** on each card of a player's **score pile (or just "pile")**.
 * There are four **stacks** on the table. 
 * Each turn player plays their card at the same time. These cards, in ascending order of their **number**, will be compared with the **top card** of each stack. Their card will be placed to the top of a correct stack, so that the **number** of top card of this stack is smaller than the **number** of the played card. In addition, if multiple stacks have top cards smaller than the played card, the stack with the largest top card will be selected.
-* Whenever a stack has 6 cards, the player who play the 6th card will need to **move the entire stack** to his score pile.
+* If a played card is smaller than every stack's top card, its player chooses any stack, collects all cards currently in that stack, and places the played card there as the replacement stack's first card.
+* Whenever a stack has 6 cards, the player who play the 6th card will need to **move the stack** to his score pile and leave the played card as the only card in this stack.
 
 
 
@@ -73,7 +74,7 @@ This models a card. A card has a unique number `number` and a number of bull hea
 
 ## `Player` class
 
-This models a player object. A player has a name. A player has a hand of cards (maximum 10 cards) `hand`. The number of card on the player's hand is kept by a variable `handCount`. A player has a score pile of cards `pile`. This variable should be a dynamic array which will automatically resized to fit the number of cards it stores. A player object supports two different way to play a card. It can play a card randomly `playCardRandomly()` or `playCard()`. The latter method will show the hand to the player and ask the player to select a proper card. There are two given methods `printPile()` and `getHandCard(int)`. You should not change any of them or we may not be able to grade your work properly.
+This models a player object. A player has a name. A player has a hand of cards (maximum 10 cards) `hand`. The number of card on the player's hand is kept by a variable `handCount`. A player has a score pile of cards `pile`. This variable should be a dynamic array which will automatically resized to fit the number of cards it stores. In the method `playCard()`, it shows the hand to the player and ask the player to select a proper card. There are two given methods `printPile()` and `getHandCard(int)`. You should not change any of them or we may not be able to grade your work properly.
 
 ## `Table` class
 

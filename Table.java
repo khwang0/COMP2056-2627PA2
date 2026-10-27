@@ -39,6 +39,10 @@ public class Table {
      * The array of players
      */
     private final Player[] players;
+    /**
+     * Name of players
+     */
+    private final String[] NAMES = { "Kevin", "Mandel", "Rachel", "SparePlayer 1", "SparePlayer 2" }; //in case you want to try more than 3 players
 
     /**
      * Default constructor
@@ -50,7 +54,7 @@ public class Table {
      * number). The value of card must be between 1 to 104. The number of bullHead
      * printed on each card can be referred to the rule.
      * 
-     * 2. Initialize three player. The name of the players are "Kevin", "Mandel", "Rachel".
+     * 2. Initialize player. The name of the players should follows the variable NAMES
      * 
      * 3. Deal randomly 10 cards to each player. A card can only be dealt to one
      * player. That is, no two players can have the same card.
@@ -63,6 +67,9 @@ public class Table {
      *
      */
     public Table(int numOfPlayers) {
+        if (numOfPlayers < 3 || numOfPlayers > 5) {
+            throw new IllegalArgumentException("Number of players must be between 3 and 5.");
+        }
         //TODO
     }
 
