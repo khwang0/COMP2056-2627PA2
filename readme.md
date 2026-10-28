@@ -78,7 +78,7 @@ This models a player object. A player has a name. A player has a hand of cards (
 
 ## `Table` class
 
-This models the table object. A table contains four stacks of cards `stacks`. Each stack has at most 6 cards. A table has also four Player objects `players`. It controls the main logic of how the game play.
+This models the table object. A table contains four stacks of cards `stacks`. Each stack has at most 6 cards. A table has also some Player objects `players`. It controls the main logic of how the game play.
 
 
 ## `TestClass` class

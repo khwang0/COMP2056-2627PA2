@@ -56,7 +56,8 @@ public class Player {
 
 
     /**
-     * Do not change this method. This method has no use in this assignment. However, it is useful for the next assignment.
+     * Do not change this method. This method has no use other than relaying
+     * request in this assignment. It has more functions in the next assignment.
      */
     public int pickStackToCollect(Card[][] stacks) {
         return pickStackToCollect();

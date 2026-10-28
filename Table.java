@@ -32,7 +32,7 @@ public class Table {
      * 
      * stacksCount should be {3, 2, 6, 1}.
      * 
-     * You are responsible to maintain the data consistency.
+     * You are responsible to maintain the data consistency at all time.
      */
     private final int[] stacksCount = new int[4];
     /**

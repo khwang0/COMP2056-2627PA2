@@ -15,9 +15,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class TestClass {
-    private ByteArrayOutputStream out;
-    @BeforeEach
-    public void setup() {
+    
+    private static ByteArrayOutputStream out;
+    @BeforeAll
+    public static void setup() {
         out = new ByteArrayOutputStream();
         System.setOut(new PrintStream(out));
     }
